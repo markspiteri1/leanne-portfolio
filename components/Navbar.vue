@@ -1,8 +1,8 @@
 <template>
     <nav>
-        <h1 class="text-3xl md:text-5xl font-medium cursor-pointer" @click="$router.push('/')">Leanne Lewis</h1>
+        <h1 class="text-2xl md:text-3xl font-medium cursor-pointer" @click="$router.push('/')">Leanne Lewis</h1>
             <div id="nav-icon3" class="navbar" :class="{ open: isMenuOpen }" @click="toggleOpen">
-                <div class="h-20">
+                <div class="h-16">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -27,6 +27,18 @@ const toggleOpen = () => {
 };
 </script>
 <style>
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 6rem;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
 /* Icon 3 */
 #nav-icon3 span:nth-child(1) {
     top: 0px;
@@ -34,11 +46,11 @@ const toggleOpen = () => {
 
 #nav-icon3 span:nth-child(2),
 #nav-icon3 span:nth-child(3) {
-    top: 12px;
+    top: 10px;
 }
 
 #nav-icon3 span:nth-child(4) {
-    top: 24px;
+    top: 20px;
 }
 
 #nav-icon3.open span:nth-child(1) {
@@ -126,14 +138,22 @@ const toggleOpen = () => {
     z-index: -1;
 }
 
+/* Make the main title sticky like the burger menu */
+nav h1 {
+    position: fixed;
+    top: 1.5rem;
+    left: 2rem;
+    z-index: 1001;
+}
+
 /* Update navbar icon positioning */
 #nav-icon3 {
     position: fixed;
-    top: 2rem;
-    right: 2rem;
+    top: 1.5rem;
+    right: 1.5rem;
     z-index: 1001;
-    width: 40px;
-    height: 35px;
+    width: 32px;
+    height: 28px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);

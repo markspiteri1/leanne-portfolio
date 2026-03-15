@@ -1,7 +1,7 @@
 <template>
   <div class="about-page flex flex-col min-h-screen items-center">
     <div class="container mx-auto px-4 py-8 max-w-4xl">
-      <div class="bio-section mb-20 bg-indigo-200 p-10!">
+      <div class="bio-section mb-20">
         <div class="flex flex-col lg:flex-row gap-8 items-center lg:items-start">
           <div class="bio-text lg:flex-1">
             <p class="text-md leading-relaxed mb-6 text-justify">
@@ -98,11 +98,6 @@
 .about-page {
   min-height: 100vh;
   padding: 2rem 0;
-}
-
-.bio-section p {
-  color: #333;
-  line-height: 1.7;
 }
 
 .exhibition-list {
